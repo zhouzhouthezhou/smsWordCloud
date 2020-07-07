@@ -9,7 +9,7 @@ import sys
 import os.path
 
 def parseXML(target):
-    doc = minidom.parse('spoon.xml')
+    doc = minidom.parse(target)
     sms = doc.getElementsByTagName('sms')
 
     texts = list()
