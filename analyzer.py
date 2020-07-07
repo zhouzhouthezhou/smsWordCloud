@@ -21,7 +21,7 @@ def parseXML(target):
         texts.append((address, date, body))
 
     df = pd.DataFrame(texts, columns =['Number', 'Date', 'Body']) 
-    df.to_pickle("spoon.pkl")
+    df.to_pickle(target.split(".")[0] + '.pkl')
     return df
 
 def generateWordCloud(df, name):
